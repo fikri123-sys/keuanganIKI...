@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background: #f0f2f5;
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header i {
+    color: #3b82f6;
+}
+
+/* Saldo Card */
+.saldo-card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.saldo-label {
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.saldo-nominal {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.saldo-nominal span {
+    color: #3b82f6;
+}
+
+/* Ringkasan */
+.ringkasan {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.ringkasan-item {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.ringkasan-item i {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.ringkasan-item span {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.ringkasan-item small {
+    color: #64748b;
+    font-size: 12px;
+}
+
+.pemasukan i, .pemasukan span {
+    color: #10b981;
+}
+
+.pengeluaran i, .pengeluaran span {
+    color: #ef4444;
+}
+
+/* Filter */
+.filter {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 8px;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.filter-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    background: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn.active {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Form Tambah */
+.form-tambah {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-field {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s;
+}
+
+.input-field:focus {
+    border-color: #3b82f6;
+}
+
+.btn-tambah {
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-tambah:hover {
+    background: #2563eb;
+}
+
+/* Info Filter */
+.info-filter {
+    background: #e2e8f0;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 16px;
+}
+
+.info-filter i {
+    margin-right: 6px;
+    color: #3b82f6;
+}
+
+/* Daftar Transaksi */
+.daftar-transaksi {
+    background: white;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.item-transaksi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.item-transaksi:last-child {
+    border-bottom: none;
+}
+
+.info-transaksi {
+    flex: 1;
+}
+
+.judul-transaksi {
+    font-weight: 500;
+    color: #1e293b;
+    margin-bottom: 4px;
+}
+
+.tanggal-transaksi {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.tanggal-transaksi i {
+    margin-right: 4px;
+    font-size: 10px;
+}
+
+.nominal-transaksi {
+    font-weight: 600;
+    margin: 0 16px;
+}
+
+.nominal-transaksi.income {
+    color: #10b981;
+}
+
+.nominal-transaksi.expense {
+    color: #ef4444;
+}
+
+.btn-hapus {
+    background: none;
+    border: none;
+    color: #cbd5e1;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.btn-hapus:hover {
+    color: #ef4444;
+    background: #fee2e2;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #94a3b8;
+}
+
+.empty-state i {
+    font-size: 48px;
+    margin-bottom: 12px;
+    color: #cbd5e1;
+}
+
+.empty-state p {
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .filter {
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        min-width: 70px;
+    }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keuangan Pribadi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1><i class="fas fa-wallet"></i> Keuangan IKI</h1>
+        </div>
+
+        <!-- Saldo Utama -->
+        <div class="saldo-card">
+            <div class="saldo-label">Saldo</div>
+            <div class="saldo-nominal">Rp <span id="total">0</span></div>
+        </div>
+
+        <!-- Ringkasan Cepat -->
+        <div class="ringkasan">
+            <div class="ringkasan-item pemasukan">
+                <i class="fas fa-arrow-up"></i>
+                <span id="totalPemasukan">Rp 0</span>
+                <small>Pemasukan</small>
+            </div>
+            <div class="ringkasan-item pengeluaran">
+                <i class="fas fa-arrow-down"></i>
+                <span id="totalPengeluaran">Rp 0</span>
+                <small>Pengeluaran</small>
+            </div>
+        </div>
+
+        <!-- Filter Periode -->
+        <div class="filter">
+            <button class="filter-btn active" onclick="filterTransaksi('semua')">Semua</button>
+            <button class="filter-btn" onclick="filterTransaksi('hari')">Hari</button>
+            <button class="filter-btn" onclick="filterTransaksi('bulan')">Bulan</button>
+            <button class="filter-btn" onclick="filterTransaksi('tahun')">Tahun</button>
+        </div>
+
+        <!-- Form Tambah Transaksi -->
+        <div class="form-tambah">
+            <input type="text" id="desc" placeholder="Keterangan" class="input-field">
+            <input type="number" id="amount" placeholder="Jumlah" class="input-field">
+            <select id="type" class="input-field">
+                <option value="income">➕ Pemasukan</option>
+                <option value="expense">➖ Pengeluaran</option>
+            </select>
+            <button onclick="tambahTransaksi()" class="btn-tambah">
+                <i class="fas fa-plus"></i> Tambah
+            </button>
+        </div>
+
+        <!-- Info Filter -->
+        <div class="info-filter" id="infoFilter">
+            <i class="fas fa-info-circle"></i> Semua Transaksi
+        </div>
+
+        <!-- Daftar Transaksi -->
+        <div class="daftar-transaksi" id="daftarTransaksi">
+            <!-- Akan diisi oleh JavaScript -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
